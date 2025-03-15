@@ -20,6 +20,7 @@ class Database {
     models
       .map((model) => model.init(this.connection))
       .map(
+        // biome-ignore lint/complexity/useOptionalChain: <explanation>
         (model) => model.associate && model.associate(this.connection.models),
       );
   };
