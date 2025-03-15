@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "src/server.js",
   "scripts": {
+    "start": "node src/server.js",
+    "type": "module",
     "dev": "nodemon"
   },
   "author": {
@@ -38,7 +40,6 @@
     "nodemon": "^3.1.7",
     "prettier": "^3.3.3",
     "sequelize-cli": "^6.6.2",
-    "sucrase": "^3.35.0",
-    "type": "module"
+    "sucrase": "^3.35.0"
   }
 }
