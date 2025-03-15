@@ -2,6 +2,7 @@ import Sequelize, { Model } from "sequelize";
 
 class Product extends Model {
   static init(sequelize) {
+    // biome-ignore lint/complexity/noThisInStatic: <explanation>
     super.init(
       {
         name: Sequelize.STRING,
@@ -19,9 +20,11 @@ class Product extends Model {
         sequelize,
       },
     );
+    // biome-ignore lint/complexity/noThisInStatic: <explanation>
     return this;
   }
   static associate(models) {
+    // biome-ignore lint/complexity/noThisInStatic: <explanation>
     this.belongsTo(models.Category, {
       foreignKey: "category_id",
       as: 'category',
